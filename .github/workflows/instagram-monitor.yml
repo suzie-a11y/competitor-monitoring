@@ -1,0 +1,37 @@
+name: Instagram competitor monitor
+
+on:
+  schedule:
+    # 09:00 Asia/Shanghai (01:00 UTC)
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout monitor
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install public collector
+        run: python -m pip install --upgrade instaloader
+
+      - name: Collect public Instagram posts
+        run: python scripts/instagram_monitor.py
+
+      - name: Commit new records
+        run: |
+          git config user.name "instagram-monitor"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/updates.jsonl data/instagram_runs
+          git diff --cached --quiet || git commit -m "monitor Instagram competitor updates"
+          git push
