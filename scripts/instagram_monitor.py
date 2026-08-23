@@ -104,6 +104,7 @@ def main() -> int:
     UPDATES.touch()
 
     loader = instaloader.Instaloader(
+        sleep=False,
         download_pictures=False,
         download_videos=False,
         download_video_thumbnails=False,
@@ -111,6 +112,9 @@ def main() -> int:
         download_comments=False,
         save_metadata=False,
         compress_json=False,
+        max_connection_attempts=1,
+        request_timeout=30,
+        fatal_status_codes=[429],
         quiet=True,
     )
 
