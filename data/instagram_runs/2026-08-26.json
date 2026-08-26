@@ -1,0 +1,51 @@
+{
+  "run_date": "2026-08-26",
+  "window_start": "2026-08-25T03:59:38.492187Z",
+  "window_end": "2026-08-26T03:59:38.492187Z",
+  "mode": "public_without_login",
+  "brands": [
+    {
+      "brand": "Spigen",
+      "market": "Global",
+      "username": "spigen",
+      "profile_url": "https://www.instagram.com/spigen/",
+      "checked_at": "2026-08-26T03:59:38.492521Z",
+      "status": "不可验证",
+      "reason": "公开页面不可验证：AbortDownloadException",
+      "posts": []
+    },
+    {
+      "brand": "BURGA",
+      "market": "Global",
+      "username": "burgaofficial",
+      "profile_url": "https://www.instagram.com/burgaofficial/",
+      "checked_at": "2026-08-26T03:59:38.732553Z",
+      "status": "不可验证",
+      "reason": "公开页面不可验证：AbortDownloadException",
+      "posts": []
+    },
+    {
+      "brand": "RHINOSHIELD",
+      "market": "Global",
+      "username": "rhinoshield",
+      "profile_url": "https://www.instagram.com/rhinoshield/",
+      "checked_at": "2026-08-26T03:59:38.799192Z",
+      "status": "不可验证",
+      "reason": "公开页面不可验证：AbortDownloadException",
+      "posts": []
+    },
+    {
+      "brand": "OtterBox",
+      "market": "Global",
+      "username": "otterbox",
+      "profile_url": "https://www.instagram.com/otterbox/",
+      "checked_at": "2026-08-26T03:59:38.865950Z",
+      "status": "不可验证",
+      "reason": "公开页面不可验证：AbortDownloadException",
+      "posts": []
+    }
+  ],
+  "verified_posts": 0,
+  "unverified_brands": 4,
+  "new_updates_appended": 0
+}
